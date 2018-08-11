@@ -91,8 +91,8 @@ To change the language of the app, edit `src/app/app.component.ts` and modify
 `translate.use('en')` to use the LANGCODE from `src/assets/i18n/`
 
 #### git commit ####
-git add .
+git add . <br>
 git commit -m "version control"
-git remote add origin https://github.com/jettarin/ER.git
+git remote add origin https://github.com/jettarin/SN.git
 git push --set-upstream origin master
 ####################
