@@ -1,0 +1,211 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ item.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div>
+
+  <div class="item-detail" padding>
+    <h2><ion-icon name='flash' item-start style="color: #0a60f5"></ion-icon> {{item.name}}</h2>
+    <p>{{item.about}}</p>
+
+
+
+
+
+    <ion-card>
+
+      <ion-item>
+
+        <h2>CBC</h2>
+        <p>consciousness-work of breathing-color</p>
+      </ion-item>
+
+
+      <ion-card-content>
+        <p><ion-icon name='information-circle' item-start style="color: #0a60f5"></ion-icon> หลังจากประเมิน CBC (consciousness-work of breathing-color) แล้วพบว่าผู้ป่วย “ ไม่รู้สึกตัว ไม่หายใจ หายใจเฮือก”
+
+          ให้เริ่มทำ CPR ตามลำดับ <strong>C-A-B</strong>
+
+          เรียกคนมาช่วย ขอเครื่อง AED/defibrillator
+
+          จัดผู้ป่วยให้นอนในพื้นราบ เรียบและแข็ง</p>
+          <p><strong>C :</strong> คลำ pulse ถ้าไม่มี pulse ภายใน 10 sec หรือ pulse < 60 + poor perfusion ให้กดหน้าอก 15 ครั้ง (30 ครั้งถ้าไม่มีผู้ช่วย)</p>
+          <p><strong>A :</strong> Head tilt-chin lift/Jaw thrust</p>
+          <p><strong>B :</strong> ช่วยหายใจอัตราส่วน 15:2 (30:2 ถ้าไม่มีผู้ช่วย)</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-icon name='information-circle' item-start style="color: #0a60f5"></ion-icon> ถ้ามีผู้ช่วยอาจพิจารณาทำ cricoid pressure เพื่อลดอากาศเข้ากระเพาะอาหาร ถ้าไม่รบกวนการ resuscitation
+        <p>เมื่อเครื่อง AED/defibrillator มาถึงให้ติด monitor EKG แล้วทำตาม algorithm ต่อไป (แยกเป็น shockable rhythm หรือ non-shockable rhythm)</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card >
+
+      <img  src="assets/img/defibrillator.jpg" #imageToViewD  (click)="view(imageToViewD)" />
+
+      <ion-card-content>
+        <ion-card-title>
+          AED/defibrillator
+        </ion-card-title>
+        <p>**ประเด็นสำคัญในการ CPR คือ Algorithm, การกดหน้าอกอย่างมีประสิทธิภาพ และการหา reversible cause “6H 5T”
+
+        </p>
+        <p> cardiac arrest: PALS</p>
+        <br>
+        <p>1. Algorithm ตาราง PALS 2015 update VF/pulseless VT
+
+          Start CPR, attach monitor, ให้ O2
+
+          Defibrillation 2 J/kg ในครั้งแรก 4 J/kg ในครั้งที่สอง และ > 4 J/kg ในครั้งต่อๆมาแต่ไม่เกิน 10 J/kg (< 200 J)
+
+          IV/IO access
+
+          ให้ epinephrine 0.01 mg/kg (0.1 mL/kg 1:10,000) IV q 3-5 min หลังจากทำการช็อกไฟฟ้าครั้งที่สอง
+
+          พิจารณาใส่ advanced airway (ETT, LMA) + ETCO2 ช่วยหายใจ 1 ครั้งทุก 6 วินาที
+
+          ให้ Amiodarone 5 mg/kg IV push หรือ lidocaine 1 mg/kg IV หลังทำการช็อกไฟฟ้าครั้งที่สาม (refractory VF) และครั้งที่ห้า</p>
+        <p>ในเด็ก < 8 ปี หรือ < 25 kg ถ้าใช้ AED ต้องมี pediatric dose attenuator
+
+            ในเด็ก < 1 ปีหรือ < 10 kg ถ้าใช้เครื่อง defibrillator ให้ใช้ paddle เด็ก
+        </p>
+        <br>
+        <p>**ในเด็ก < 1 ปีหรือ < 10 kg ถ้าใช้เครื่อง defibrillator ให้ใช้ paddle เด็ก</p>
+        <br>
+        <p>***ในเด็ก < 8 ปี หรือ < 25 kg ถ้าใช้ AED ต้องมี pediatric dose attenuator
+
+              Asystole
+
+              Start CPR, attach monitor, ให้ O2
+
+              IV/IO access
+
+              ให้ epinephrine 0.01 mg/kg (0.1 mL/kg 1:10,000) IV q 3-5 min
+
+              พิจารณาใส่ advanced airway (ETT, LMA) + ETCO2 ช่วยหายใจ 1 ครั้งทุก 6 วินาที</p>
+          <br>
+          <p>2. การกดหน้าอกอย่างมีประสิทธิภาพ
+
+                กดหน้าอกลึกอย่างน้อย 1/3 ของความลึกทรวงอก (> 5 ซม. ในเด็ก > 1 ปี และ > 4 cm ในทารก) เร็วอย่างน้อย 100 ครั้งต่อนาที และปล่อยหน้าอกให้คืนสุดไม่กดค้าง
+
+                รบกวนการกดหน้าอกให้น้อยที่สุด
+
+                สลับผู้กดหน้าอกทุก 2 นาที
+
+                ถ้า ETCO2 < 15 mmHg ให้พยายามปรับปรุงการ CPR ให้ดีขึ้น</p>
+          <br>
+          <p>3. การหา reversible cause 6H 5T: Hx, PE, VBG, DTX
+
+                  Hypothermia Hypoxia
+
+                  Hypovolemia Hypoglycemia
+
+                  Hypo/hyperkalemia Hydrogen ion
+
+                  Toxins Tamponade (cardiac)
+
+                  Tension pneumothorax Thrombosis (MI) Thrombosis (PE)</p>
+          <p><br></p>
+          <p>**พิจารณาทำ echocardiography ในการหาสาเหตุ (pericardial tamponade, inadequate ventricular filling) โดยรบกวนการทำ CPR ให้น้อยที่สุด</p>
+          <br>
+          <p>***พิจารณาทำ extracorporeal CPR (ECMO) ใน ร.พ.ที่มีศักยภาพ กรณีที่มี underlying cardiac conditions และเป็น intra-hospital cardiac arrest
+
+                    ขนาด equipment ในเด็ก
+
+                    ETT size x 1 = 4 + (อายุ /4) ใน uncuff และ 3.5 + (อายุ/4) ใน cuff
+
+                    ETT size x 2 = Suction size, NG/OG, Foley’s catheter
+
+                    ETT size x 3 หรือ 12 + (อายุ/2) = ETT depth
+
+                    ETT size x 4 = ICD size
+
+                    Laryngoscope blade size no.1 < 10 kg; no.2 BW 10-30 kg; no.3 > 30 kg
+
+                    OPA วัดจากมุมปากถึง angle of mandible; NPA จัดจากจมูกถึง angle of mandible
+
+                    ขั้นตอนการ confirm ETT
+
+                    เห็น chest move 2 ข้าง ฟังปอด 2 ข้าง เหนือ axillae
+
+                    ฟัง gastric insufflation ที่ stomach
+
+                    ดู ETCO2 หรือ oesophageal detector device (> 20 kg with perfusing rhythm)
+
+                    ดู O2 saturation
+
+                    ถ้ายังไม่มั่นใจ ให้ใช้ direct laryngoscopy ดูว่า ETT ผ่านเข้าไประหว่าง vocal cord</p>
+          <br>
+          <p>CXR
+
+                      ถ้าอาการเปลี่ยนแปลงให้คิดถึง “DOPE” Displacement of the tube, Obstruction of the tube, Pneumothorax, Equipment failure
+
+                      Post resuscitation care</p>
+          <p>หลังจากที่ผู้ป่วยมี ROSC แล้วให้ประเมิน primary-secondary-tertiaryassessment แล้วให้การดูแลอย่างเป็นระบบได้แก่
+
+                        Temperature: ใน comatose children ให้รักษาอุณหภูมิกายอยู่ที่ 36-37.5oC เป็นเวลา 5 วัน หรืออาจพิจารณาทำ therapeutic hypothermia 2 วันแรก (32-34oC) ในกรณีที่เป็น Out-of-hospital cardiac arrest ก็ได้
+
+                        RS: ดูแล oxygenation และ ventilation ให้ O2 saturation อยู่ที่ 94-99%, ระดับ PaCO2 ขึ้นภาวะของผู้ป่วย แต่ไม่ให้ < 30 mmHg หรือ > 50 mmHg (monitor ETCO2)
+
+                        CVS: รักษาภาวะ shock ให้ SBP > 5th percentile (ทำ A-line) โดยการให้ intravascular volume ให้เพียงพอ รักษา myocardial dysfunction และ cardiac arrhythmia แก้ไข “6H 5T” ให้ inotropic หรือ vasopressor (epinephrine) ลด metabolic demand รักษา metabolic disorders อื่นๆ
+
+                        NS: ป้องกัน secondary brain injury (hypoxia, hypotension, anemia, hyperglycemia, hyperthermia) รักษาภาวะชัก พิจารณาทำ therapeutic hypothermia
+
+                        RS: monitor UO และประเมินการทำงานของไต (BUN, Cr, electrolyte glucose, UA)
+
+                        GI: ใส่ NG/OG decompress bowel ตรวจการทำงาน (bowel sound) ตรวจ liver, pancreas หรืออื่นๆที่สงสัย
+
+                        Hemato: รักษา Hct และ coagulation ให้อยู่ในเกณฑ์ปกติ
+
+                        มีการใช้ EEG (continuous, reactive tracing) ใน 7 วันแรกในการพยากรณ์ good neurological outcome</p>
+      </ion-card-content >
+
+      <img  src="assets/img/PALS.png" #imageToViewPALS  (click)="view(imageToViewPALS)" />
+
+
+
+  </ion-card>
+  <ion-card >
+    <ion-card-header>
+        <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon> PBLS.
+    </ion-card-header>
+    <ion-card-content>
+        Pediatric Basic Life Support หมายถึง หัตถการฟื้นคืนชีพในเด็กที่ไม่อาศัยเครื่องมือ อุปกรณ์หรือยา
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card >
+      <ion-card-header >
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon> PALS.
+      </ion-card-header>
+      <ion-card-content>
+          Pediatric Advanced Life Support หมายถึง หัตถการฟื้นคืนชีพในเด็กที่อาศัยเครื่องมือ อุปกรณ์ หรือ ยา
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card >
+        <ion-card-header >
+            <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon> เด็กเล็ก (infant)
+        </ion-card-header>
+        <ion-card-content>
+            เด็กเล็ก (infant) หมายถึง เด็ก อายุตั้งแต่ 1ปีจนถึงวัยเริ่มเข้าสู่วัยรุ่นวัยเกินจากนั้นถือว่าเป็น ผู้ใหญ่
+        </ion-card-content>
+      </ion-card>
+
+      <img  src="assets/img/cprkids.jpg" #imageToViewCprkids  (click)="view(imageToViewCprkids)" />
+
+  </div>
+
+
+
+
+</ion-content>

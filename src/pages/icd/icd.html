@@ -1,0 +1,79 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>{{ item.name }}</ion-title>
+    </ion-navbar>
+
+  </ion-header>
+
+
+  <ion-content>
+    <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+    </div>
+
+    <div class="item-detail" padding>
+      <h2><ion-icon name='git-branch' item-start style="color: #0a60f5"></ion-icon> {{item.name}}</h2>
+      <p>{{item.about}}</p>
+
+      <ion-card>
+          <ion-card-header>
+              <strong><ion-icon name='git-branch' item-start style="color: #0a60f5"></ion-icon> การใส่ ICD ( Intercostal drainge/ Chest tube insertion)</strong>
+          </ion-card-header>
+          <ion-card-content>
+              <p>เพื่อระบายลมและของเหลวในช่องปอดเช่น น้ำหนอง น้ำเหลืองและเลือด</p>
+              <p><strong>ข้อบ่งชี้ในการใส่ท่อระบายในช่องปอด</strong> </p>
+
+<p class="icd-p">1. Trauma</p>
+<p class="icd-p">2. Spontaneuous pneumothorax</p>
+<p class="icd-p">3. Massive pleural effusion and Malignant pleural effusion</p>
+<p class="icd-p">4. Empyema thoracis</p>
+<p class="icd-p">5. Chylothorax</p>
+
+          </ion-card-content>
+        </ion-card>
+
+
+        <ion-card>
+            <ion-card-header>
+               <strong><ion-icon name='git-branch' item-start style="color: #0a60f5"></ion-icon> การดูแลICD</strong>
+            </ion-card-header>
+            <ion-card-content>
+              <p class="icd-p">1.การทำงานต้องอยู่ในระบบปิด Closed System seal ข้อต่อต่างๆให้เเน่นและปลายหลอดแก้วขวดUWS( under water seal)ต้องจุ่มในน้ำที่กำหนด
+
+              <br><strong>***ถ้าพบว่าปลายหลอดแก้วไม่จุ่มในน้ำให้รีบใช้ clamp สายแล้วเติมน้ำหลังจากนั้นให้ผู้ป่วยไอแรงๆๆเพื่อระบายลม</strong></p>
+              <p class="icd-p">2. ระวังขวดล้ม/เอียง</p>
+              <p class="icd-p">3.สังเกตการFluctuated ของระดับน้ำในขวดแก้วถ้าหายใจเข้า/ออกระดับน้ำขึ้น/ลง</p>
+              <p class="icd-p">4.เปลี่ยนขวดเมื่อ contentเพิ่มและปลายหลอดแก้วอยู่ใต้น้ำเกิน 5 ซม</p>
+              <p class="icd-p">5.วางขวดต่ำกว่าทรวงอกของผู้ป่วยเสมอ</p>
+            </ion-card-content>
+          </ion-card>
+          <img  src="assets/img/icd.jpg" alt="" #imageToViewICD  (click)="view(imageToViewICD)" />
+          <img  src="assets/img/icd1.png" alt="" #imageToViewICD1  (click)="view(imageToViewICD1)" />
+          <ion-card >
+              <ion-card-header>
+
+              </ion-card-header>
+              <ion-card-content>
+                <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon> กรณีต่อแบบ2ขวดหากพบว่าน้ำในขวด UWS ถูกดูดย้อนทางกลับไปขวดเก็บสารเหลวแสดงว่า Neg-pressureในโพรงงเยื่อหุ้มปอดสูงขึ้นแก้ไขเบื้องต้น โดยการต่อสายระหว่างขวดที่1-2ให้ยาวยกสายขึ้นและยกขวดเก็บสารเหลวให้อยู่สูงกว่าขวดอื่น
+              </ion-card-content>
+            </ion-card>
+            <ion-card >
+                <ion-card-header>
+                    <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon> หากมีฟองอากาศปุดในUWS สังเกตว่า
+                </ion-card-header>
+                <ion-card-content>
+
+                  <ion-icon name='git-branch' item-start style="color: #0a60f5"></ion-icon> ถ้าเกิดขณะหายใจออกหรือไออาจมีPneumothorax ที่ต้องระบายออก<br>
+                  <ion-icon name='git-branch' item-start style="color: #0a60f5"></ion-icon> กรณีต่อกับขวดsuction แล้วมีฟองอากาศปุดตลอดเวลา อาจมีการรั่วของระบบให้ทดสอบโดยการclamp ท่อระบายที่ออกจากผู้ป่วย<br>
+                  <ion-icon name='git-branch' item-start style="color: #0a60f5"></ion-icon> ถ้าฟองอากาศปุดเกิดเวลาหายใจอาจเกิดจากBronchopleural fistula หรือบริเวณที่ใส่ท่อระบายใหญ่เกินไปหรือสายเลื่อนออกให้ใช้วาสลีนก๊อสปิดรอบแผลแล้วรีบรายงานแพทย์ <br>
+                  <ion-icon name='git-branch' item-start style="color: #0a60f5"></ion-icon> ถ้าฟองอากาศไม่หายไปอาจเกิดจากข้อต่อต่างๆหลุดหรือ sealไม่แน่นให้clamp เหนือรอยต่างๆแล้ว sealเหนือรอยต่อนั้นใหม่
+                </ion-card-content>
+              </ion-card>
+
+    </div>
+
+
+
+
+
+  </ion-content>

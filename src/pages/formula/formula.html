@@ -1,0 +1,158 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>{{ item.name }}</ion-title>
+    </ion-navbar>
+
+  </ion-header>
+
+
+  <ion-content>
+    <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+    </div>
+
+    <div class="item-detail" padding>
+      <h2><ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> {{item.name}}</h2>
+      <p>{{item.about}}</p>
+
+      <ion-card>
+
+
+          <ion-card-content>
+            <ion-card-title>
+                DOPAMINE   1 amp มียา 250 mg /10cc (1cc=25 mg)
+            </ion-card-title>
+            <p><ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> Dopa 1:1 = Dopa  4 cc   + 5 DW /NSS 100 cc   หรือ  Dopa  20 cc + น้ำ 500 cc</p>
+
+            <p>
+              <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> Dopa 2:1 = Dopa 8 cc + 5 DW/ NSS  100 cc  หรือ  Dopa  40 cc + น้ำ 500 cc
+            </p>
+
+            <p>
+              <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> Dopa 4:1 = Dopa 16 cc + 5 DW /NSS 100 cc    หรือ  Dopa 80 cc + น้ำ 500 cc
+            </p>
+          </ion-card-content >
+
+
+
+
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+            <ion-card-title>
+                DOBUTAMINE     DBT 1 vial มียา 250 mg/ 20cc (1cc=12.5mg)
+            </ion-card-title>
+            <p>
+              <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> DBT 1:1 = DBT 8 cc (100mg) +5 DW / NSS  100 cc
+          </p>
+
+          <p>
+            <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> DBT 2:1 = DBT 16 cc (200mg) + 5 DW / NSS  100 cc
+          </p>
+
+          <p>
+            <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> DBT 4:1 = DBT 32 cc (400mg) +5 DW / NSS  100 cc
+          </p>
+          </ion-card-content >
+
+
+
+      </ion-card>
+      <ion-card>
+          <ion-card-content>
+              <ion-card-title>
+                  NiTROGLYCERINE      NTG 1amp มียา 50 mg / 10 cc ( 1cc = 5 mg )
+              </ion-card-title>
+              <p>
+                <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> NTG 1:1 = NTG 20 cc (100 mg) + 5 DW / NSS  100 cc
+            </p>
+            <p>
+              <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> NTG 1:2 = NTG 10 cc (50 mg) + 5DW /NSS  100 cc
+            </p>
+
+            <p>
+              <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> NTG 1:5 = NTG 4 cc (20 mg) +5DW /NSS 100 cc
+            </p>
+            <p>
+              <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> NTG 1:10 = NTG 2 cc (10 mg) +5DW / NSS 100 cc
+            </p>
+            </ion-card-content >
+
+        </ion-card>
+
+        <ion-card>
+            <ion-card-content>
+                <ion-card-title>
+                    Nicardipine 1 amp =10 mg/10 ml
+                </ion-card-title>
+                <p>
+                  <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> Nicardipine  1:5 = Nicardipine 20 mg  (2amp) + NSS 100 cc
+              </p>
+              <p>
+                <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> Nicardipine  1:10 = Nicardipine 10 mg  (1amp) + NSS 100 cc
+              </p>
+
+              <p>
+                <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> Mo 1 amp =10 mg  วิธีเตรียม dilute SW 10 ml เป็น 1 mg / 1 ml
+              </p>
+              <p>
+                <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> การให้ในเด็ก = 0.1 mg/kg
+              </p>
+              </ion-card-content >
+
+          </ion-card>
+
+          <ion-card>
+              <ion-card-content>
+                  <ion-card-title>
+                      ADENOSINE
+                  </ion-card-title>
+                  <p>
+                    <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> Adenosine 1 vial = 6 mg มี 2 ml  = 3 mg มี 1 ml <br>
+                    *เทคนิคการให้ : Double syring ตามด้วย NSS 10-20 cc
+
+                </p>
+                </ion-card-content >
+
+
+            </ion-card>
+
+            <ion-card>
+                <ion-card-content>
+                    <ion-card-title>
+                        Adrenaline
+                    </ion-card-title>
+                    <p>
+                      <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> 1:1000 ใช้ในเด็กให้ dilute ด้วย water 10 cc จะได้ปริมาณ 1:10000
+                    </p>
+                  </ion-card-content >
+
+
+              </ion-card>
+
+
+                <ion-card >
+                    <ion-card-header>
+                        <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon> NOTE
+                    </ion-card-header>
+                    <ion-card-content>
+                      <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> ERIC -------40 U/kg       <br>
+                      <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> HRIC-------- 20 U/kg <br>
+                      <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> NE	  ห้ามผสมใน	NSS <br>
+                      <ion-icon name='flask' item-start style="color: #0a60f5"></ion-icon> Amiodarone <br>
+                        Dilantin ---------------      ห้ามผสมใน 5DW  และ  5%DN/2
+                    </ion-card-content>
+                  </ion-card>
+
+
+
+
+
+    </div>
+
+
+
+
+
+  </ion-content>

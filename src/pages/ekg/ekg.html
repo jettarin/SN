@@ -1,0 +1,64 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> {{ item.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div>
+
+  <div class="item-detail" padding>
+    <h2><ion-icon name='pulse' item-start style="color: #0a60f5"></ion-icon> {{item.name}} <ion-icon name='pulse' item-start style="color: #0a60f5"></ion-icon></h2>
+    <p>{{item.about}}</p>
+
+    <ion-card>
+      <ion-card-content>
+          <img  src="assets/img/ekg.jpg" alt="" #imageToViewEKG  (click)="view(imageToViewEKG)" />
+          <img  src="assets/img/ekg1.jpg" alt="" #imageToViewEKG1  (click)="view(imageToViewEKG1)" />
+          <img  src="assets/img/ekg2.jpg" alt="" #imageToViewEKG2  (click)="view(imageToViewEKG2)" />
+          <img  src="assets/img/ekg3.jpg" alt="" #imageToViewEKG3  (click)="view(imageToViewEKG3)" />
+        <ion-icon name='information-circle' item-start style="color: #0a60f5"></ion-icon> การติด lead bedside monitoring มีทั้งแบบ 3 lead และ 5 lead
+        <p> ตำแหน่งที่ติดเหมือนกัน ซ้ายและขวาบนให้ติดที่ infraclavicular fossa คือตรงใต้กระดูกไหปลาร้าส่วนปลายจะเป็นร่องตื้นๆใกล้หัวไหล่ขวาเป็นตำแหน่ง RA ใกล้หัวไหล่ซ้ายเป็น LA ส่วนซ้ายและขวาล่างให้ติดใต้ชายโครงค่อนไปทางหน้าท้องด้านซ้ายเป็นตำแหน่ง LL และทางขวาเป็น ground หรือ reference ติดทางไหนก็ได้แต่นิยมติดทางขวา
+
+          ระบบ 3 lead จะมี RA, LA และ LL แต่สามารถ monitor ได้เพียง 3 lead คือ lead I, II, III
+
+          ระบบ 5 lead จะมี RA, LA, LL, RL (ground หรือ reference) และ V1 (สีน้ำตาล ติดที่ช่องซี่โครงที่ 4 ชิดกระดูกหน้าอกทางขวา) สามารถ monitor ได้ 7 lead คือ lead I, II, III, aVR, aVL, aVF, V1
+
+          ในกรณีผู้ป่วยมี cardiac arrhythmia อาจใช้ระบบ 3 lead ได้ แต่ถ้ามาด้วยอาการโรคหลอดเลือดหัวใจตายหรือตีบตัน ควรใช้แบบ 5 lead จะสามารถ monitor ตำแหน่งที่เกิด ischemia หรือ infarct ได้ดีกว่า อย่างไรก็ตามกรณีของโรคกล้ามเนื้อหัวใจตาย การ monitorโดยใช้ standard 12 lead EKG จะดีที่สุด แต่เราไม่สามารถทำได้ เนื่องจากผู้ป่วยต้องมีการเคลื่อนไหวตลอด 24 ชม. ต้องติด lead ทั้งหมดถึง10 lead ตำแหน่งที่ติด lead ทำให้ graph ไม่คมชัด จึงมีการ modified lead ให้สามารถ monitor ได้ครบ 12 lead แต่ติด lead เพียง 5 lead เท่านั้น เช่น EASI lead และ TrusT 12 lead</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+       <ion-card-title>
+          การติด lead V7, V8, V9
+        </ion-card-title>
+        <p>ในกรณีที่ผู้ป่วยมาด้วยเรื่อง acute myocardial infarction ถ้า run EKG แล้วมี inferior wall MI (จะสอนวิธีการดู EKG in AMI ภายหลัง) พยาบาลจะ run lead V3R, V4R เพื่อดูว่ามีหัวใจห้องขวาล่าง infarct หรือไม่ และดูว่ามี posterior wall infarct หรือไม่
+
+          การดู posterior wall ดูที่ lead V1, V2, V3 เป็น mirror image คือดูภาพกลับหัวแล้วดูภาพสะท้อนในกระจก จะเห็น R wave ใน V1-V3 สูงกว่าปกติและมี ST depressed แต่ในต่างประเทศ และใน รพ.เอกชนบางแห่งในไทยอาจให้ พยาบาลช่วยติด lead V7-V9 วิธีการติดยุ่งยากเพราะต้องให้ผู้ป่วยนอนตะแคง ซึ่งบางคนไม่เคยได้ยิน วิธีการคือ
+
+          V7–ติดที่ posterior axillary line, เป็นเส้นตรงต่อจาก V4-V6
+
+          V8–ติดที่ mid scapular line(ปลายแหลมของ scapular),
+
+          เป็นเส้นตรงต่อจาก V7 และ V9
+
+          V9–ติดที่ left spinal border, เป็นเส้นตรงต่อจาก V4-V6
+
+          (ดูรูปที่ 3 ประกอบ)
+
+          เนื่องจาก chest lead มีทั้งหมด 6 เส้น ให้ใช้สาย leadจาก V4, V5, V6 มาใช้ที่ V7, V8, V9 เมื่อพิมพ์กระดาษออกมา ให้ label ใหม่ว่า V7, V8, V9
+
+          รูป 4 และ 5 เปรียบเทียบ MI จาก lead V1, V2, V3 และ V7, V8, V9</p>
+          <img  src="assets/img/lead.jpg" alt="" #imageToViewLe  (click)="view(imageToViewLe)" />
+          <img  src="assets/img/lead2.jpg" alt="" #imageToViewLe2  (click)="view(imageToViewLe2)"/>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+
+</ion-content>

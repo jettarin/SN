@@ -1,0 +1,147 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ item.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div>
+
+  <div class="item-detail" padding>
+    <h2><ion-icon name='ionic' item-start style="color: #0a60f5"></ion-icon> {{item.name}}</h2>
+    <p>{{item.about}}</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-card (click)="note()">
+              <ion-card-header  text-center>
+                  <ion-icon name='attach' item-start style="color: #0a60f5"></ion-icon> Note.
+              </ion-card-header>
+            </ion-card>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-card>
+        <img  src="assets/img/NasalCanular.jpg" alt="" #imageToViewNC  (click)="view(imageToViewNC)" />
+        <ion-card-content>
+          <ion-card-title>
+            Nasal Canular
+          </ion-card-title>
+        </ion-card-content >
+        <ion-item>
+          <ion-icon name='musical-notes' item-start style="color: #d03e84"></ion-icon>
+          O2flow (L/min)
+          <ion-badge item-end>FiO2</ion-badge>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+            <p text-center><strong>1</strong></p>
+            <ion-badge item-end>0.24</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>2</strong></p>
+          <ion-badge item-end>0.28</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>3</strong></p>
+          <ion-badge item-end>0.32</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>4</strong></p>
+          <ion-badge item-end>0.36</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>5</strong></p>
+          <ion-badge item-end>0.40</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>6</strong></p>
+          <ion-badge item-end>0.47</ion-badge>
+        </ion-item>
+    </ion-card>
+    <ion-card >
+        <img  src="assets/img/mask.jpg" #imageToViewMask  (click)="view(imageToViewMask)" />
+        <ion-card-content>
+          <ion-card-title>
+            Simple O2 mask
+          </ion-card-title>
+        </ion-card-content >
+        <ion-item>
+          <ion-icon name='musical-notes' item-start style="color: #d03e84"></ion-icon>
+          O2flow (L/min)
+          <ion-badge item-end>FiO2</ion-badge>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+            <p text-center><strong>6</strong></p>
+            <ion-badge item-end>0.40</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>7</strong></p>
+          <ion-badge item-end>0.50</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>8</strong></p>
+          <ion-badge item-end>0.60</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>4</strong></p>
+          <ion-badge item-end>0.36</ion-badge>
+        </ion-item>
+    </ion-card>
+    <ion-card >
+        <img  src="assets/img/Oxygen-mask-with-bag.jpg" #imageToViewWb  (click)="view(imageToViewWb)" />
+        <ion-card-content>
+          <ion-card-title>
+            Mask with bag
+          </ion-card-title>
+        </ion-card-content >
+        <ion-item>
+          <ion-icon name='musical-notes' item-start style="color: #d03e84"></ion-icon>
+          O2flow (L/min)
+          <ion-badge item-end>FiO2</ion-badge>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+            <p text-center><strong>6</strong></p>
+            <ion-badge item-end>0.60</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>7</strong></p>
+          <ion-badge item-end>0.70</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>8</strong></p>
+          <ion-badge item-end>0.80</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>9</strong></p>
+          <ion-badge item-end>0.90</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='exit' item-start style="color: #0a60f5"></ion-icon>
+          <p text-center><strong>10</strong></p>
+          <ion-badge item-end>0.99</ion-badge>
+        </ion-item>
+    </ion-card>
+
+  </div>
+
+</ion-content>
